@@ -31,11 +31,10 @@ async function changeFile () {
 async function sendNotify (text,desp) {
   const options ={
     uri:  `${serverJ}`+""+text,
-    form: { text, desp },
     json: true,
     method: 'GET'
   }
-  await rp.post(options).then(res=>{
+  await rp.get(options).then(res=>{
     console.log(res)
   }).catch((err)=>{
     console.log(err)
