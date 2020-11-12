@@ -30,10 +30,10 @@ async function changeFile () {
 
 async function sendNotify (text,desp) {
   const options ={
-    uri:  `${serverJ}`,
+    uri:  `${serverJ}`""+text,
     form: { text, desp },
     json: true,
-    method: 'POST'
+    method: 'GET'
   }
   await rp.post(options).then(res=>{
     console.log(res)
