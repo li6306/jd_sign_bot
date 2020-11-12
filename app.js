@@ -30,7 +30,7 @@ async function changeFile () {
 
 async function sendNotify (text,desp) {
   const options ={
-    uri:  `${serverJ}`""+text,
+    uri:  `${serverJ}`+""+text,
     form: { text, desp },
     json: true,
     method: 'GET'
